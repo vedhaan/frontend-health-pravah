@@ -1,0 +1,61 @@
+
+
+.top-scrolling-btn {
+  padding: 25px;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  border: 2px solid rgba(0, 0, 0, 0.356);
+  background-color: rgba(0, 0, 0, 0.144);
+  box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.459);
+  z-index: 1000;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color 0.3s ease, border 0.3s ease;
+  text-decoration: none;
+}
+
+.top-scrolling-btn:hover {
+  background-color: rgba(0, 0, 0, 0.534);
+  border: 2px solid rgba(255, 255, 255, 0.699);
+}
+
+.top-scrolling-icon {
+  color: rgba(0, 0, 0, 0.7);
+  transition: color 0.2s ease;
+}
+
+.top-scrolling-btn:hover .top-scrolling-icon {
+  color: rgba(255, 255, 255, 0.842);
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .top-scrolling-btn {
+    right: 20px;
+    bottom: 30px;
+    padding: 1px 0;
+  }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .top-scrolling-btn {
+    right: 25px;
+    bottom: 25px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1200px) {
+  .top-scrolling-btn {
+    right: 30px;
+    bottom: 30px;
+  }
+}

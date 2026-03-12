@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.doctor-btn {
+  padding: 10px 8px;
+  width: 200px;
+  border-radius: 30px;
+  border: none;
+  background-color: rgb(90, 90, 255);
+  font-weight: 600;
+  transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease, color 0.2s ease-in-out;
+  align-items: end;
+  justify-content: center;
+  color: white;
+}
+
+.doctor-btn:hover {
+  background-color: white;
+  box-shadow: 0 0 0 2px rgb(90, 90, 255);
+  color: black;
+}
+
+.doctor-info1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px 10px 30px 100px;
+}
+
+.doctor-info2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 50px 30px 30px 100px;
+}
+
+.doctor-head {
+  margin-top: 30px;
+  display: flex;
+  /* align-items: center; */
+}
+
+.doctor-degree {
+  color: rgb(68, 68, 252);
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+.doctor-text {
+  margin: 20px 0 50px 0;
+}
+
+.doc-img-wrapper {
+  max-width: 100%;
+  height: auto;
+}
+
+.doc-img-wrapper img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border: 1px solid rgba(0, 0, 0, 0.315);
+  border-radius: 100px;
+  animation: ziggle 4s infinite ease-in-out;
+}
+
+.doc-row {
+  margin: 50px 0;
+}
+
+@keyframes ziggle {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+
+  25% {
+    transform: translate(-5px, -5px) rotate(-2deg);
+  }
+
+  50% {
+    transform: translate(5px, 5px) rotate(2deg);
+  }
+
+  75% {
+    transform: translate(-3px, 3px) rotate(-1deg);
+  }
+
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+
+/* responsive  */
+
+@media (max-width: 767px) {
+  .doctor-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 10px;
+    margin: auto;
+  }
+
+  .doctor-info1,
+  .doctor-info2 {
+    margin: auto;
+    padding: 10px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .doctor-head {
+    font-size: 1.3rem !important;
+    /* margin-top: 2rem !important; */
+    margin-bottom: 1rem !important;
+    line-height: 1.3;
+    margin: 0 auto;
+    max-width: 100%;
+    padding: 10px 0;
+  }
+
+  .doc-img-wrapper {
+    padding: 13px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+
+  .doctor-info1,
+  .doctor-info2 {
+    margin: auto;
+    padding: 10px 10px;
+    padding-left: 5rem;
+  }
+
+  .first-doc-img,
+  .sec-doctor-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+}

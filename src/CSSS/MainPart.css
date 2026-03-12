@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+.main-banner-part {
+    background: url('../Images/HealthPravah_Banner.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh; 
+    width: 100%;
+    position: relative;
+    margin-top: -80px;
+    padding-top: 80px;
+    overflow: hidden;
+}
+
+.main-banner-part::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 20%; 
+    width: 100%;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.4), transparent); 
+    pointer-events: none; 
+    z-index: 2;
+}
+
+.main-text-part {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-43%,-50%);
+    font-family: Georgia, 'Times New Roman', Times, serif !important;
+}
+
+.main-small-text {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+    font-size: 1.1rem;
+    margin: 30px 0 15px 0;
+}
+
+.main-small-text2 {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+    font-size: 1.1rem;
+    color: rgba(61, 61, 250, 0.801);
+    /* margin: 30px 0; */
+}
+
+.whatsapp-btn {
+    color: white;
+    background-color: rgb(90, 90, 255);
+    border-radius: 20px;
+    animation: whatsappAnimation 5s ease-in-out infinite;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    width: 20rem;
+    height: 3rem;
+    position: relative;
+    margin-top: 30px;
+}
+
+@keyframes whatsappAnimation {
+    0% {
+        box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.4);
+    }
+
+    25% {
+        box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.7);
+    }
+
+    50% {
+        box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.4);
+    }
+
+    75% {
+        box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.7);
+    }
+
+    100% {
+        box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.4);
+    }
+}
+
+.whatsapp-btn:hover {
+    color: white;
+    background-color: black;
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.whatsapp-btn i {
+    position: absolute;
+    content: "";
+    left: 4%;
+    rotate: 0deg;
+    transition: left 0.4s ease,rotate 0.4s ease;
+    z-index: 5;
+}
+
+.whatsapp-btn:hover i {
+    left: 17rem;
+    rotate: 20deg;
+    z-index: 5;
+}
+
+/* responsive  */
+
+/* ========== Extra small devices (phones, portrait) ========== */
+@media (max-width: 400px) {
+  .main-banner-part {
+    height: 50vh;
+    background-size: cover;
+    background-position: top;
+  }
+
+  .main-text-part {
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center;
+    margin-top: 3rem;
+  }
+
+  .main-small-text {
+    font-size: 0.9rem;
+  }
+
+  .whatsapp-btn {
+    width: 90%;
+    height: 2.5rem;
+    font-size: 0.9rem;
+    left: 50%;
+    transform: translateX(-50%)
+  }
+
+  .whatsapp-btn:hover i {
+    left: 80%;
+  }
+}
+
+/* ========== Small devices (phones) ========== */
+@media (min-width: 401px) and (max-width: 575px) {
+  .main-banner-part {
+    height: 50vh;
+    background-size: cover;
+    background-position: center top;
+  }
+
+  .main-text-part {
+    transform: translate(-50%, -50%);
+    margin-top: 3rem;
+    width: 90%;
+    text-align: center;
+  }
+
+  .main-small-text,
+  .main-small-text2 {
+    font-size: 1rem;
+  }
+
+  .whatsapp-btn {
+    width: 18rem;
+    height: 2.8rem;
+    font-size: 0.95rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .whatsapp-btn:hover i {
+    left: 85%;
+  }
+}
+
+/* ========== Medium devices (tablets) ========== */
+@media (min-width: 576px) and (max-width: 767px) {
+  .main-banner-part {
+    height: 70vh;
+    background-size: cover;
+  }
+
+  .main-text-part {
+    transform: translate(-50%, -50%);
+    width: 80%;
+    text-align: center;
+  }
+
+  .main-small-text,
+  .main-small-text2 {
+    font-size: 1rem;
+  }
+
+  .whatsapp-btn {
+    width: 20rem;
+    height: 3rem;
+  }
+
+  .whatsapp-btn:hover i {
+    left: 88%;
+  }
+}
+
+/* ========== Large devices (small laptops/desktops) ========== */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .main-banner-part {
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .main-text-part {
+    transform: translate(-65%, -50%);
+    width: 70%;
+    text-align: left;
+  }
+
+  .main-small-text,
+  .main-small-text2 {
+    font-size: 1.1rem;
+  }
+
+  .whatsapp-btn {
+    width: 20rem;
+    height: 3rem;
+    font-size: 1rem;
+  }
+
+  .whatsapp-btn:hover i {
+    left: 88%;
+  }
+}
+
+/* ========== Extra large devices (HD desktops) ========== */
+@media (min-width: 1200px) {
+  .main-banner-part {
+    height: 100vh;
+    background-size: cover;
+  }
+
+  .main-text-part {
+    transform: translate(-43%, -50%);
+    text-align: left;
+  }
+
+  .main-small-text,
+  .main-small-text2 {
+    font-size: 1.2rem;
+  }
+
+  .whatsapp-btn {
+    width: 20rem;
+    height: 3rem;
+    font-size: 1rem;
+  }
+
+  .whatsapp-btn:hover i {
+    left: 17rem;
+  }
+}
+
